@@ -33,7 +33,7 @@ class MonteCarloSimulation
 
     public void RunSimulation()
     {
-        Console.WriteLine("Monte Carlo Simulation to Estimate Pi (Serial)");
+        Console.WriteLine("Monte Carlo Simulation to Estimate Pi");
 
         int numPoints = 1000000000;  // Number of points for the simulation
 
@@ -60,6 +60,9 @@ class MonteCarloSimulation
         Console.WriteLine($"CPU Time: {cpuUsage.TotalMilliseconds} ms");
         Console.WriteLine($"CPU Cores Used: {Environment.ProcessorCount}");
 
+        Console.WriteLine();
+        Console.WriteLine();
+        
         // Generate performance graph
         GeneratePerformanceGraph(stopwatch.ElapsedMilliseconds, cpuUsage.TotalMilliseconds, Environment.ProcessorCount);
     }
